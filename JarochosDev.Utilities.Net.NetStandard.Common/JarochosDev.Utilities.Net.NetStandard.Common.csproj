@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyVersion>1.0.0.4</AssemblyVersion>
+    <FileVersion>1.0.0.4</FileVersion>
+    <Version>1.0.0.4</Version>
+    <AssemblyName>JarochosDev.Utilities.Net.NetStandard.Common</AssemblyName>
+    <Description>Provides access to the libraries that help to build common standard development for projects developed by Jarochos Dev.</Description>
+  </PropertyGroup>
+
+</Project>
