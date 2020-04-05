@@ -28,4 +28,12 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Logger\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Diagnostics.EventLog" Version="4.6.0" />
+  </ItemGroup>
+
 </Project>
