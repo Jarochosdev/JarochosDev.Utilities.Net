@@ -5,7 +5,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <AssemblyVersion>1.0.1.0</AssemblyVersion>
     <FileVersion>1.0.1.0</FileVersion>
-    <Version>1.0.1</Version>
+    <Version>1.0.1.1</Version>
     <AssemblyName>JarochosDev.Utilities.Net.NetStandard.Common</AssemblyName>
     <Description>Provides access to the libraries that help to build common standard development for projects developed by Jarochos Dev.</Description>
     <Authors>Jarochos Dev</Authors>
