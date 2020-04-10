@@ -1,4 +1,4 @@
-﻿namespace JarochosDev.Utilities.Net.NetStandard.Common.Converter
+﻿namespace JarochosDev.Utilities.Net.NetStandard.Common.Converters
 {
     public interface IObjectConverter<TFrom, TTo>
     {

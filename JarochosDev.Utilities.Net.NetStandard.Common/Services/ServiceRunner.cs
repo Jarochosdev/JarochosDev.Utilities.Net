@@ -1,23 +1,24 @@
 ﻿using System;
+using JarochosDev.Utilities.Net.NetStandard.Common.Processes;
 
-namespace JarochosDev.Utilities.Net.NetStandard.ConsoleApp
+namespace JarochosDev.Utilities.Net.NetStandard.Common.Services
 {
-    public class ConsoleServiceRunner : IConsoleServiceRunner
+    public class ServiceRunner : IServiceRunner
     {
-        private static IConsoleServiceRunner _instance;
+        private static IServiceRunner _instance;
 
-        public static IConsoleServiceRunner Instance()
+        public static IServiceRunner Instance()
         {
-            return _instance ?? (_instance = new ConsoleServiceRunner());
+            return _instance ?? (_instance = new ServiceRunner());
         }
 
-        public void Run(IConsoleService consoleService)
+        public void Run(IStartableProcess consoleService)
         {
             consoleService.Start();
             consoleService.Stop();
         }
 
-        public void RunEndless(IConsoleService consoleService)
+        public void RunEndless(IStartableProcess consoleService)
         {
             consoleService.Start();
 

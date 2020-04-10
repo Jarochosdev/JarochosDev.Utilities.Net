@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace JarochosDev.Utilities.Net.NetStandard.Common.Logger
+namespace JarochosDev.Utilities.Net.NetStandard.Common.Loggers
 {
     public class TxtFileMessageLogger : IMessageLogger
     {

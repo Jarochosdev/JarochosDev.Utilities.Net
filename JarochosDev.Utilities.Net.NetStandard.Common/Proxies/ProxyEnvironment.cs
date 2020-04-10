@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JarochosDev.Utilities.Net.NetStandard.Common.Proxy
+namespace JarochosDev.Utilities.Net.NetStandard.Common.Proxies
 {
     public class ProxyEnvironment : IProxyEnvironment
     {

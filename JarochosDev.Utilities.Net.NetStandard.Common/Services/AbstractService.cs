@@ -1,20 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using JarochosDev.Utilities.Net.NetStandard.ConsoleApp.DependencyInjection;
+using JarochosDev.Utilities.Net.NetStandard.Common.DependencyInjection;
+using JarochosDev.Utilities.Net.NetStandard.Common.Processes;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace JarochosDev.Utilities.Net.NetStandard.ConsoleApp
+namespace JarochosDev.Utilities.Net.NetStandard.Common.Services
 {
-    public abstract class AbstractConsoleService : IConsoleService
+    public abstract class AbstractService : IStartableProcess, IFinalizerProcess
     {
         private bool _isStarted;
         private IServiceProvider _serviceProvider;
         private readonly List<IServiceModule> _serviceModules;
         internal IServiceProviderBuilder ServiceProviderBuilder { get; }
         public IReadOnlyCollection<IServiceModule> ServiceModules => _serviceModules.AsReadOnly();
-        protected AbstractConsoleService(IEnumerable<IServiceModule> serviceModules) : this(serviceModules, new ServiceProviderBuilder(new ServiceCollection())) { }
+        protected AbstractService(IEnumerable<IServiceModule> serviceModules) : this(serviceModules, new ServiceProviderBuilder(new ServiceCollection())) { }
 
-        private AbstractConsoleService(IEnumerable<IServiceModule> serviceModules, IServiceProviderBuilder serviceProviderBuilder)
+        private AbstractService(IEnumerable<IServiceModule> serviceModules, IServiceProviderBuilder serviceProviderBuilder)
         {
             _serviceModules = new List<IServiceModule>();
             if (serviceModules != null)
@@ -24,7 +25,7 @@ namespace JarochosDev.Utilities.Net.NetStandard.ConsoleApp
             ServiceProviderBuilder = serviceProviderBuilder;
         }
 
-        public void Start()
+        public IFinalizerProcess Start()
         {
             if (!_isStarted)
             {
@@ -48,6 +49,8 @@ namespace JarochosDev.Utilities.Net.NetStandard.ConsoleApp
                     throw error;
                 }
             }
+
+            return this;
         }
 
         protected abstract void StartService(IServiceProvider dependencyInjectionContainer);
