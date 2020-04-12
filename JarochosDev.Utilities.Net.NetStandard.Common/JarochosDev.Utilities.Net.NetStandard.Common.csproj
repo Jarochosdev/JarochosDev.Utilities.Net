@@ -1,11 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <AssemblyVersion>1.0.1.0</AssemblyVersion>
     <FileVersion>1.0.1.0</FileVersion>
-    <Version>1.0.1</Version>
+    <Version>1.0.1.1</Version>
     <AssemblyName>JarochosDev.Utilities.Net.NetStandard.Common</AssemblyName>
     <Description>Provides access to the libraries that help to build common standard development for projects developed by Jarochos Dev.</Description>
     <Authors>Jarochos Dev</Authors>
@@ -15,6 +15,7 @@
     <RepositoryUrl>https://github.com/Jarochosdev/JarochosDev.Utilities.Net</RepositoryUrl>
     <PackageLicenseFile>License.txt</PackageLicenseFile>
     <NeutralLanguage>en</NeutralLanguage>
+    <UserSecretsId>0d2068e7-b1f4-493b-9059-0c6908765db8</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -37,7 +38,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.3" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.0" />
     <PackageReference Include="System.Diagnostics.EventLog" Version="4.6.0" />
     <PackageReference Include="System.ServiceProcess.ServiceController" Version="4.6.0" />
   </ItemGroup>
